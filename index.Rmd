@@ -27,6 +27,8 @@ knitr::opts_chunk$set(
   fig.show = TRUE,
   hiline = TRUE
 )
+
+library(icons)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -34,6 +36,18 @@ library(xaringanthemer)
 style_mono_light(
   base_color = "#23395b"
 )
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-animate-all, echo=FALSE}
+#xaringanExtra::use_animate_all("slide_left")
+```
+
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
 ```
 
 ## Brainstorm
@@ -50,16 +64,113 @@ your own media garden of content
 
 ---
 
-## OBS
+## Why not blogging?
 
+It is not either/or, in fact it is good to have both!
+
+---
+background-image: url(img/mantas-hesthaven-_g1WdcKcV3w-unsplash.jpg)
+background-size: cover
+class: center, top
+
+---
+background-image: url(img/shiny_post_screenshot.png)
+background-size: cover
+class: center, bottom
+
+#### [community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927](https://community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927)
+
+---
+class: center, bottom
+
+<img src="img/hotshot_stream.gif" width="90%"/>
+
+#### [youtube.com/watch?v=1rBipvBuWL4](https://www.youtube.com/watch?v=1rBipvBuWL4)
+
+---
+
+## A clear path forward
+
+--
+
+.pull-left[
+
+<img src="img/jim_hester.png" width="100%"/>
+[youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ](https://www.youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ)
+
+]
+
+--
+
+.pull-right[
+
+<img src="img/martin_wimpress.png" width="100%"/>
+[youtube.com/watch?v=mduyk66lvb0](https://www.youtube.com/watch?v=mduyk66lvb0)
+]
+
+---
+
+## OBS Studio
+
+.pull-left[
 - Cross platform
 - Slightly intimidating at first
 - Can be as simple or complex setup as you like
 - Immense flexibility via plugins (much like R packages)
 - Scenes are like a list object (nested scenes)
 - Automation possible with obs-cli
+]
+
+.pull-right[
+<img src="img/OBSDemoApp.png" width="100%"/>
+]
 
 ---
+
+# Playing with CSS
+
+**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
+
+.list-box[Welcome]
+
+<style>
+.list-box {
+  border: 5px solid black;
+  background-color: #4D8DC9;
+  height: 400px;
+  width: 1000px;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  font-size: 2.2em;
+  text-align: center;
+}
+</style>
+
+---
+
+## OBS Parallels to `r icon_style(fontawesome("r-project"), fill = "blue")`
+
++ Base install has a lot of built-in features already to get you started
++ plugins can enhance your experience developing and serving streams, much like community packages in R
++ Organizing the building blocks of your setup with scenes, which contains sources and can even contain more scenes. This is like the list object in R
+
+---
+
+## Tips for using OBS
+
+* Audio devices in dedicated scenes
+* Back up your settings regularly
+* Always do test recordings whenever you change levels or scene layouts
+* unload images and other media sources when not using their associated scenes
+* If streaming to YouTube, take advantage of doing an unlisted stream so you can mimic what it will be like for the real thing
+* Lock sources when finished placing them, so you don't accidently move them
+* If doing both streaming and recording, highly recommended to use a graphics card to offload encoding (I use an NVidia card in my streaming computer)
+
+Link to video when ready
+
+---
+
 
 ## Audacity
 
