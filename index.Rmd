@@ -1,9 +1,9 @@
 ---
-title: "Presentation Ninja"
-subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+title: "How open source enables state-of-the-art media production"
+subtitle: "UseR! 2021: Community and Outreach"
 author: 
   - "Eric Nantz"
-date: '`r Sys.Date()`'
+date: '09JULY2021'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -29,6 +29,10 @@ knitr::opts_chunk$set(
 )
 
 library(icons)
+library(magrittr)
+library(jsonlite)
+library(purrr)
+library(dplyr)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -50,29 +54,26 @@ xaringanExtra::use_tile_view()
 xaringanExtra::use_freezeframe()
 ```
 
-## Brainstorm
+## Contributing to the R community
 
-* Current times accelerated the push for media content
-* Open source tools combined with robust platforms empower you to create
-your own media garden of content
-* Many possibilities for the type of content
-* Today we focus on audio/video production
-* Phases of content production
-   * Preparation
-   * Recording
-   * Post-production & Release
+<img src="img/slack.png" width="80%">
+
+The R for Data Science Slack Community
 
 ---
 
-## Why not blogging?
+## Contributing to the R community
 
-It is not either/or, in fact it is good to have both!
+<img src="img/thomas_mock_blog.png" width="80%">
+
+The Mockup Blog authored by Thomas Mock, written with the `{distill}` package.
 
 ---
 background-image: url(img/mantas-hesthaven-_g1WdcKcV3w-unsplash.jpg)
 background-size: cover
 class: center, top
 
+# The Destination (and Journey)
 ---
 background-image: url(img/shiny_post_screenshot.png)
 background-size: cover
@@ -89,12 +90,13 @@ class: center, bottom
 
 ---
 
-## A clear path forward
+# The Seeds are Planted
 
 --
 
 .pull-left[
 
+#### Jim Hester's R Development Video Tutorials
 <img src="img/jim_hester.png" width="100%"/>
 [youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ](https://www.youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ)
 
@@ -104,8 +106,15 @@ class: center, bottom
 
 .pull-right[
 
+#### Martin Wimpress' Dev Channel
 <img src="img/martin_wimpress.png" width="100%"/>
 [youtube.com/watch?v=mduyk66lvb0](https://www.youtube.com/watch?v=mduyk66lvb0)
+]
+
+--
+
+.center[
+The commonality: Each produced media content with OBS!
 ]
 
 ---
@@ -113,12 +122,12 @@ class: center, bottom
 ## OBS Studio
 
 .pull-left[
-- Cross platform
+- Cross platform streaming and video production application
 - Slightly intimidating at first
 - Can be as simple or complex setup as you like
 - Immense flexibility via plugins (much like R packages)
 - Scenes are like a list object (nested scenes)
-- Automation possible with obs-cli
+- Automation and integrations possible with open APIs
 ]
 
 .pull-right[
@@ -127,27 +136,133 @@ class: center, bottom
 
 ---
 
-# Playing with CSS
+# My Welcome Scene
 
-**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
+.welcome-box[]
 
-.list-box[Welcome]
+--
+
+.image-location[
+`r icons::fontawesome("image") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.obs-image[
+<img src="img/welcome_background_only.png" width="100%"/>
+]
+
+--
+
+.footer-location[
+`r icons::fontawesome("newspaper") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.obs-image[
+<img src="img/welcome_background_footer.png" width="100%"/>
+]
+
+--
+
+.camera-location[
+`r icons::fontawesome("camera") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.mic-location[
+`r icons::fontawesome("microphone") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.obs-image[
+<img src="img/welcome_obs.png" width="100%"/>
+]
 
 <style>
-.list-box {
+.welcome-box {
   border: 5px solid black;
   background-color: #4D8DC9;
-  height: 400px;
-  width: 1000px;
+  height: 420px;
+  width: 400px;
   position: absolute;
-  bottom: 50px;
-  right: 100px;
+  bottom: 110px;
+  right: 750px;
   font-size: 2.2em;
   text-align: center;
 }
+
+.camera-location {
+  position: absolute;
+  bottom: 340px;
+  right: 960px;
+}
+
+.image-location {
+  position: absolute;
+  bottom: 150px;
+  right: 980px;
+}
+
+.mic-location {
+  position: absolute;
+  bottom: 340px;
+  right: 800px;
+}
+
+.footer-location {
+  position: absolute;
+  bottom: 150px;
+  right: 770px;
+}
+
+.obs-image {
+  height: 500px;
+  width: 600px;
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+}
+
 </style>
 
 ---
+
+# The Building Blocks of OBS
+
+--
+
+.pull-left[
+  ## Sources
+
+  * Individual components to be captured or displayed in your production
+  * Examples: Camera, audio inputs, screen capture, window capture, media files, and much more
+
+]
+
+.pull-right[
+  ## Scenes
+
+  * A collection of one or more sources
+  * Ability to show/hide sources as needed
+  * No (theoritical) limitation on the number of sources inside a scene
+]
+
+--
+
+### How to effectively organize your OBS setup?
+
+---
+
+# The connections with R
+
+### __Sources__ = __(Specialized) Vectors__: A special type of object that may have its own custom attributes and specialties.
+
+### __Scenes__ = __Lists__: A container of objects, including (potentially) other scenes/lists!
+
+---
+
+# Inside the Welcome Scene
+
+Add more here
+
+---
+
 
 ## OBS Parallels to `r icon_style(fontawesome("r-project"), fill = "blue")`
 
@@ -171,15 +286,39 @@ Link to video when ready
 
 ---
 
+# Audacity
 
-## Audacity
-
+.left-column[
 * One of the first open-source audio recorder/editors used in podcasting
 * Cross-platform
 * Recently achieved version 3
 * Many built-in plugins for noise reduction, fade in/out, multi-track editing
+]
+
+.right-column[
+<img src="img/audacity_demo.gif" width="100%"/>
+]
 
 ---
+
+# Shotcut
+
+.left-column[
+* A premier open-source video editor
+* Reference implementation of the MLT standard (look this up)
+* Many plugins and filters included for audio/video customization
+* Can leverage hardware for faster encoding
+]
+
+.right-column[
+[https://www.shotcut.org](https://www.shotcut.org/)
+
+<img src="img/shotcut_demo.gif" width="100%"/>
+]
+
+---
+
+
 
 ## VOD Ninja
 
@@ -188,14 +327,7 @@ Link to video when ready
 * Customize options via query parameters in the URL
 * I use it with my shiny dev series interviews
 
----
-
-## Shotcut
-
-* A premier open-source video editor
-* Reference implementation of the MLT standard (look this up)
-* Many plugins and filters included for audio/video customization
-* Can leverage hardware for faster encoding
+### TODO: Add screenshot
 
 ---
 
@@ -214,292 +346,23 @@ Link to video when ready
 
 ---
 
-## Typography
 
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
+# Playing with CSS
 
-[Link to another slide](#colors).
+**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
 
-### Lorem Ipsum
+.list-box[Welcome]
 
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
-
----
-name: colors
-
-## Colors
-
-- <span style="color: var(--text-color)">Text Color</span>
-
-- <span style="color: var(--header-color); font-family: var(--header-font-family);">Header Color</span>
-
-- <span style="color: var(--link-color)">Link Color</span>
-
-- <span style="color: var(--text-bold-color); font-weight: bold;">Bold Color</span>
-
-- `inline code color`
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-```{r eval=FALSE}
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+<style>
+.list-box {
+  border: 5px solid black;
+  background-color: #4D8DC9;
+  height: 400px;
+  width: 1000px;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  font-size: 2.2em;
+  text-align: center;
 }
-```
-
----
-
-### More R Code
-
-```{r eval=FALSE}
-dplyr::starwars %>% dplyr::slice_sample(n = 4)
-```
-
----
-
-```{r message=TRUE}
-cli::cli_alert_success("It worked!")
-```
-
---
-
-```{r message=TRUE}
-message("Just a friendly message")
-```
-
---
-
-```{r warning=TRUE}
-warning("This could be bad...")
-```
-
---
-
-```{r error=TRUE}
-stop("I hope you're sitting down for this")
-```
-
-
----
-layout: true
-
-## Tables
-
----
-
-```{r}
-tibble::as_tibble(mtcars)
-```
-
----
-
-```{r}
-knitr::kable(head(mtcars), format = 'html')
-```
-
----
-
-```{r}
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-```{r plot-example}
-library(ggplot2)
-(g <- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
----
-
-```{r plot-example-themed}
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
----
-layout: false
-
-## Square image
-
-<center><img src="https://octodex.github.com/images/labtocat.png" height="400px" /></center>
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
----
-class: center, middle
-
-# Thanks!
-
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan)<br>
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+</style>

@@ -40,7 +40,8 @@
 		"hediet.vscode-drawio",
 		"MS-vsliveshare.vsliveshare-pack",
 		"ms-python.python",
-		"RDebugger.r-debugger"
+		"RDebugger.r-debugger",
+		"GitHub.copilot"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

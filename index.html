@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Presentation Ninja</title>
+    <title>How open source enables state-of-the-art media production</title>
     <meta charset="utf-8" />
     <meta name="author" content="Eric Nantz" />
-    <meta name="date" content="2021-06-22" />
-    <script src="index_files/header-attrs/header-attrs.js"></script>
     <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
     <script src="index_files/tile-view/tile-view.js"></script>
     <script src="index_files/freezeframe/freezeframe.min.js"></script>
     <script src="index_files/xaringanExtra-freezeframe/freezeframe-init.js"></script>
     <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
-    <script src="index_files/htmlwidgets/htmlwidgets.js"></script>
-    <script src="index_files/jquery/jquery.min.js"></script>
-    <link href="index_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="index_files/datatables-binding/datatables.js"></script>
-    <link href="index_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="index_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="index_files/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
-    <script src="index_files/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Presentation Ninja
-## ⚔️ xaringan +<br/>😎 xaringanthemer
+# How open source enables state-of-the-art media production
+## UseR! 2021: Community and Outreach
 ### Eric Nantz
-### 2021-06-22
+### 09JULY2021
 
 ---
 
@@ -44,29 +33,26 @@ class: center, middle, inverse, title-slide
 
 
 
-## Brainstorm
+## Contributing to the R community
 
-* Current times accelerated the push for media content
-* Open source tools combined with robust platforms empower you to create
-your own media garden of content
-* Many possibilities for the type of content
-* Today we focus on audio/video production
-* Phases of content production
-   * Preparation
-   * Recording
-   * Post-production &amp; Release
+&lt;img src="img/slack.png" width="80%"&gt;
+
+The R for Data Science Slack Community
 
 ---
 
-## Why not blogging?
+## Contributing to the R community
 
-It is not either/or, in fact it is good to have both!
+&lt;img src="img/thomas_mock_blog.png" width="80%"&gt;
+
+The Mockup Blog authored by Thomas Mock, written with the `{distill}` package.
 
 ---
 background-image: url(img/mantas-hesthaven-_g1WdcKcV3w-unsplash.jpg)
 background-size: cover
 class: center, top
 
+# The Destination (and Journey)
 ---
 background-image: url(img/shiny_post_screenshot.png)
 background-size: cover
@@ -83,12 +69,13 @@ class: center, bottom
 
 ---
 
-## A clear path forward
+# The Seeds are Planted
 
 --
 
 .pull-left[
 
+#### Jim Hester's R Development Video Tutorials
 &lt;img src="img/jim_hester.png" width="100%"/&gt;
 [youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ](https://www.youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ)
 
@@ -98,8 +85,15 @@ class: center, bottom
 
 .pull-right[
 
+#### Martin Wimpress' Dev Channel
 &lt;img src="img/martin_wimpress.png" width="100%"/&gt;
 [youtube.com/watch?v=mduyk66lvb0](https://www.youtube.com/watch?v=mduyk66lvb0)
+]
+
+--
+
+.center[
+The commonality: Each produced media content with OBS!
 ]
 
 ---
@@ -107,12 +101,12 @@ class: center, bottom
 ## OBS Studio
 
 .pull-left[
-- Cross platform
+- Cross platform streaming and video production application
 - Slightly intimidating at first
 - Can be as simple or complex setup as you like
 - Immense flexibility via plugins (much like R packages)
 - Scenes are like a list object (nested scenes)
-- Automation possible with obs-cli
+- Automation and integrations possible with open APIs
 ]
 
 .pull-right[
@@ -121,27 +115,133 @@ class: center, bottom
 
 ---
 
-# Playing with CSS
+# My Welcome Scene
 
-**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
+.welcome-box[]
 
-.list-box[Welcome]
+--
+
+.image-location[
+&lt;svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#34ebc0;height:8em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 336H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v276a6 6 0 0 1-6 6zM128 152c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zM96 352h320v-80l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L192 304l-39.515-39.515c-4.686-4.686-12.284-4.686-16.971 0L96 304v48z"&gt;&lt;/path&gt;&lt;/svg&gt;
+]
+
+.obs-image[
+&lt;img src="img/welcome_background_only.png" width="100%"/&gt;
+]
+
+--
+
+.footer-location[
+&lt;svg viewBox="0 0 576 512" style="position:relative;display:inline-block;top:.1em;fill:#34ebc0;height:8em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M552 64H112c-20.858 0-38.643 13.377-45.248 32H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h496c13.255 0 24-10.745 24-24V88c0-13.255-10.745-24-24-24zM48 392V144h16v248c0 4.411-3.589 8-8 8s-8-3.589-8-8zm480 8H111.422c.374-2.614.578-5.283.578-8V112h416v288zM172 280h136c6.627 0 12-5.373 12-12v-96c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v96c0 6.627 5.373 12 12 12zm28-80h80v40h-80v-40zm-40 140v-24c0-6.627 5.373-12 12-12h136c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H172c-6.627 0-12-5.373-12-12zm192 0v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0-144v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0 72v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12z"&gt;&lt;/path&gt;&lt;/svg&gt;
+]
+
+.obs-image[
+&lt;img src="img/welcome_background_footer.png" width="100%"/&gt;
+]
+
+--
+
+.camera-location[
+&lt;svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#34ebc0;height:8em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M512 144v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1L376 96h88c26.5 0 48 21.5 48 48zM376 288c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"&gt;&lt;/path&gt;&lt;/svg&gt;
+]
+
+.mic-location[
+&lt;svg viewBox="0 0 352 512" style="position:relative;display:inline-block;top:.1em;fill:#34ebc0;height:8em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z"&gt;&lt;/path&gt;&lt;/svg&gt;
+]
+
+.obs-image[
+&lt;img src="img/welcome_obs.png" width="100%"/&gt;
+]
 
 &lt;style&gt;
-.list-box {
+.welcome-box {
   border: 5px solid black;
   background-color: #4D8DC9;
-  height: 400px;
-  width: 1000px;
+  height: 420px;
+  width: 400px;
   position: absolute;
-  bottom: 50px;
-  right: 100px;
+  bottom: 110px;
+  right: 750px;
   font-size: 2.2em;
   text-align: center;
 }
+
+.camera-location {
+  position: absolute;
+  bottom: 340px;
+  right: 960px;
+}
+
+.image-location {
+  position: absolute;
+  bottom: 150px;
+  right: 980px;
+}
+
+.mic-location {
+  position: absolute;
+  bottom: 340px;
+  right: 800px;
+}
+
+.footer-location {
+  position: absolute;
+  bottom: 150px;
+  right: 770px;
+}
+
+.obs-image {
+  height: 500px;
+  width: 600px;
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+}
+
 &lt;/style&gt;
 
 ---
+
+# The Building Blocks of OBS
+
+--
+
+.pull-left[
+  ## Sources
+
+  * Individual components to be captured or displayed in your production
+  * Examples: Camera, audio inputs, screen capture, window capture, media files, and much more
+
+]
+
+.pull-right[
+  ## Scenes
+
+  * A collection of one or more sources
+  * Ability to show/hide sources as needed
+  * No (theoritical) limitation on the number of sources inside a scene
+]
+
+--
+
+### How to effectively organize your OBS setup?
+
+---
+
+# The connections with R
+
+### __Sources__ = __(Specialized) Vectors__: A special type of object that may have its own custom attributes and specialties.
+
+### __Scenes__ = __Lists__: A container of objects, including (potentially) other scenes/lists!
+
+---
+
+# Inside the Welcome Scene
+
+Add more here
+
+---
+
 
 ## OBS Parallels to &lt;svg viewBox="0 0 581 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:blue;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"&gt;&lt;/path&gt;&lt;/svg&gt;
 
@@ -165,15 +265,39 @@ Link to video when ready
 
 ---
 
+# Audacity
 
-## Audacity
-
+.left-column[
 * One of the first open-source audio recorder/editors used in podcasting
 * Cross-platform
 * Recently achieved version 3
 * Many built-in plugins for noise reduction, fade in/out, multi-track editing
+]
+
+.right-column[
+&lt;img src="img/audacity_demo.gif" width="100%"/&gt;
+]
 
 ---
+
+# Shotcut
+
+.left-column[
+* A premier open-source video editor
+* Reference implementation of the MLT standard (look this up)
+* Many plugins and filters included for audio/video customization
+* Can leverage hardware for faster encoding
+]
+
+.right-column[
+[https://www.shotcut.org](https://www.shotcut.org/)
+
+&lt;img src="img/shotcut_demo.gif" width="100%"/&gt;
+]
+
+---
+
+
 
 ## VOD Ninja
 
@@ -182,14 +306,7 @@ Link to video when ready
 * Customize options via query parameters in the URL
 * I use it with my shiny dev series interviews
 
----
-
-## Shotcut
-
-* A premier open-source video editor
-* Reference implementation of the MLT standard (look this up)
-* Many plugins and filters included for audio/video customization
-* Can leverage hardware for faster encoding
+### TODO: Add screenshot
 
 ---
 
@@ -208,451 +325,26 @@ Link to video when ready
 
 ---
 
-## Typography
 
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
+# Playing with CSS
 
-[Link to another slide](#colors).
+**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
 
-### Lorem Ipsum
+.list-box[Welcome]
 
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
-
----
-name: colors
-
-## Colors
-
-- &lt;span style="color: var(--text-color)"&gt;Text Color&lt;/span&gt;
-
-- &lt;span style="color: var(--header-color); font-family: var(--header-font-family);"&gt;Header Color&lt;/span&gt;
-
-- &lt;span style="color: var(--link-color)"&gt;Link Color&lt;/span&gt;
-
-- &lt;span style="color: var(--text-bold-color); font-weight: bold;"&gt;Bold Color&lt;/span&gt;
-
-- `inline code color`
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-&gt; This is a blockquote following a header.
-&gt;
-&gt; When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-
-```r
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+&lt;style&gt;
+.list-box {
+  border: 5px solid black;
+  background-color: #4D8DC9;
+  height: 400px;
+  width: 1000px;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  font-size: 2.2em;
+  text-align: center;
 }
-```
-
----
-
-### More R Code
-
-
-```r
-dplyr::starwars %&gt;% dplyr::slice_sample(n = 4)
-```
-
----
-
-
-```r
-cli::cli_alert_success("It worked!")
-```
-
-```
-## ✓ It worked!
-```
-
---
-
-
-```r
-message("Just a friendly message")
-```
-
-```
-## Just a friendly message
-```
-
---
-
-
-```r
-warning("This could be bad...")
-```
-
-```
-## Warning: This could be bad...
-```
-
---
-
-
-```r
-stop("I hope you're sitting down for this")
-```
-
-```
-## Error in eval(expr, envir, enclos): I hope you're sitting down for this
-```
-
-
----
-layout: true
-
-## Tables
-
----
-
-
-```r
-tibble::as_tibble(mtcars)
-```
-
-```
-## # A tibble: 32 x 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # … with 22 more rows
-```
-
----
-
-
-```r
-knitr::kable(head(mtcars), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; cyl &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 258 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 360 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 225 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-
-```r
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
-<div id="htmlwidget-73945ee1507b10d4d673" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-73945ee1507b10d4d673">{"x":{"filter":"none","fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-
-```r
-library(ggplot2)
-(g &lt;- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
-&lt;img src="index_files/figure-html/plot-example-1.png" width="100%" /&gt;
-
----
-
-
-```r
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-&lt;img src="index_files/figure-html/plot-example-themed-1.png" width="100%" /&gt;
-
----
-layout: false
-
-## Square image
-
-&lt;center&gt;&lt;img src="https://octodex.github.com/images/labtocat.png" height="400px" /&gt;&lt;/center&gt;
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
-
----
-class: center, middle
-
-# Thanks!
-
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+&lt;/style&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
