@@ -1,0 +1,43 @@
+.welcome-box {
+    border: 5px solid black;
+    background-color: #4D8DC9;
+    height: 420px;
+    width: 400px;
+    position: absolute;
+    bottom: 110px;
+    right: 750px;
+    font-size: 2.2em;
+    text-align: center;
+  }
+  
+  .camera-location {
+    position: absolute;
+    bottom: 340px;
+    right: 960px;
+  }
+  
+  .image-location {
+    position: absolute;
+    bottom: 150px;
+    right: 980px;
+  }
+  
+  .mic-location {
+    position: absolute;
+    bottom: 340px;
+    right: 800px;
+  }
+  
+  .footer-location {
+    position: absolute;
+    bottom: 150px;
+    right: 770px;
+  }
+  
+  .obs-image {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+  }

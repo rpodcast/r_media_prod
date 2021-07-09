@@ -6,13 +6,20 @@ author:
 date: '09JULY2021'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: [xaringan-themer.css, extra.css]
+    seal: false
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: true
+params:
+  live: FALSE
+  vdo_id: 9AggKgA
+  room_id: rmediaprod2021
+  iframe_width: 1280
+  iframe_height: 520
 ---
 
 ```{r setup, include=FALSE}
@@ -33,6 +40,12 @@ library(magrittr)
 library(jsonlite)
 library(purrr)
 library(dplyr)
+
+# source supporting scripts
+source("utils.R")
+
+# create nested tibble of obs scene/sources metadata
+obs_df <- create_obs_df("data/shinydevseries_scene_collection_livestream_1080p.json")
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -54,26 +67,44 @@ xaringanExtra::use_tile_view()
 xaringanExtra::use_freezeframe()
 ```
 
-## Contributing to the R community
+class: image-sidebar-right
+background-image: url(https://source.unsplash.com/9FwrfeM2XIY/600x681)
+background-size: 600px 681px
+background-position: right
 
-<img src="img/slack.png" width="80%">
+.pull-left[
+.center[
+## How Open-Source and R Enable State-of-the-Art Media Production
 
-The R for Data Science Slack Community
+### Eric Nantz
+### Statistician & Content Creator
+### UseR! 09-July-2021
+]
+]
 
 ---
+class: center, middle
 
-## Contributing to the R community
+### The R for Data Science Slack Community
 
-<img src="img/thomas_mock_blog.png" width="80%">
+<img src="img/slack_with_border.png" width="80%">
 
+???
 The Mockup Blog authored by Thomas Mock, written with the `{distill}` package.
+---
+class: center, middle
+
+### Sharing insights via blogging
+
+<img src="img/thomas_mock_blog_with_border.png" width="80%">
+
 
 ---
 background-image: url(img/mantas-hesthaven-_g1WdcKcV3w-unsplash.jpg)
 background-size: cover
 class: center, top
 
-# The Destination (and Journey)
+## The Destination (and Journey)
 ---
 background-image: url(img/shiny_post_screenshot.png)
 background-size: cover
@@ -82,13 +113,14 @@ class: center, bottom
 #### [community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927](https://community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927)
 
 ---
-class: center, bottom
+class: center, middle
 
-<img src="img/hotshot_stream.gif" width="90%"/>
+<img src="img/hotshot_stream.gif" width='1280' height='520'/>
 
 #### [youtube.com/watch?v=1rBipvBuWL4](https://www.youtube.com/watch?v=1rBipvBuWL4)
 
 ---
+class: center, top
 
 # The Seeds are Planted
 
@@ -97,7 +129,7 @@ class: center, bottom
 .pull-left[
 
 #### Jim Hester's R Development Video Tutorials
-<img src="img/jim_hester.png" width="100%"/>
+<img src="img/jim_hester_with_border.png" width="100%"/>
 [youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ](https://www.youtube.com/channel/UC3mcThQVORlwCY4k1vB0FmQ)
 
 ]
@@ -107,36 +139,105 @@ class: center, bottom
 .pull-right[
 
 #### Martin Wimpress' Dev Channel
-<img src="img/martin_wimpress.png" width="100%"/>
+<img src="img/martin_wimpress_with_border.png" width="100%"/>
 [youtube.com/watch?v=mduyk66lvb0](https://www.youtube.com/watch?v=mduyk66lvb0)
 ]
 
 --
 
 .center[
-The commonality: Each produced media content with OBS!
+### Each produced with OBS!
+]
+
+???
+OBS Stuff
+- plugins are like R packages
+- automation and integration possible with open APIs
+---
+
+.center[
+## OBS Studio
+]
+
+.left-column[
+- Cross-platform audio & video production
+- The **de-facto standard** for streaming content to YouTube & Twitch
+- Immense flexibility via plugins
+- Most tutorials are targeted to the gaming community
+]
+
+.right-column[
+.center[
+<img src="img/obs_interface_screenshot.png" width="95%"/>
+[obsstudio.com](https://obsstudio.com)
+]
 ]
 
 ---
 
-## OBS Studio
+.center[
+## The Building Blocks of OBS
+]
+
+
+--
 
 .pull-left[
-- Cross platform streaming and video production application
-- Slightly intimidating at first
-- Can be as simple or complex setup as you like
-- Immense flexibility via plugins (much like R packages)
-- Scenes are like a list object (nested scenes)
-- Automation and integrations possible with open APIs
+.center[
+## Sources
+]
+* Individual components with their own unique **attributes** to be captured or displayed in your production
+* Examples: Camera, audio inputs, screen capture, window capture, media files, and much more
 ]
 
+--
+
 .pull-right[
-<img src="img/OBSDemoApp.png" width="100%"/>
+.center[
+## Scenes
 ]
+* **Collection** of one or more sources
+* **Any** type of source can be included, including other **scenes!**
+]
+
+--
+
+.center[
+# `r emo::ji("thinking")` That sounds quite familiar...
+]
+ 
+
+---
+.center[
+# The connections with `r icon_style(fontawesome("r-project"), fill = "blue")`
+]
+
+--
+
+.pull-left[
+.center[
+## Vectors
+]
+* Individual components with their own unique **attributes** 
+* Examples: character, numeric, boolean
+]
+
+--
+
+.pull-right[
+.center[
+## Lists
+]
+* **Collection** of one or more objects
+* **Any** type of object can be included, including other **lists!**
+]
+
 
 ---
 
-# My Welcome Scene
+.center[
+## My Welcome Scene
+]
 
 .welcome-box[]
 
@@ -174,106 +275,54 @@ The commonality: Each produced media content with OBS!
 <img src="img/welcome_obs.png" width="100%"/>
 ]
 
-<style>
-.welcome-box {
-  border: 5px solid black;
-  background-color: #4D8DC9;
-  height: 420px;
-  width: 400px;
-  position: absolute;
-  bottom: 110px;
-  right: 750px;
-  font-size: 2.2em;
-  text-align: center;
-}
-
-.camera-location {
-  position: absolute;
-  bottom: 340px;
-  right: 960px;
-}
-
-.image-location {
-  position: absolute;
-  bottom: 150px;
-  right: 980px;
-}
-
-.mic-location {
-  position: absolute;
-  bottom: 340px;
-  right: 800px;
-}
-
-.footer-location {
-  position: absolute;
-  bottom: 150px;
-  right: 770px;
-}
-
-.obs-image {
-  height: 500px;
-  width: 600px;
-  position: absolute;
-  bottom: 20px;
-  right: 100px;
-}
-
-</style>
-
----
-
-# The Building Blocks of OBS
-
---
-
-.pull-left[
-  ## Sources
-
-  * Individual components to be captured or displayed in your production
-  * Examples: Camera, audio inputs, screen capture, window capture, media files, and much more
-
-]
-
-.pull-right[
-  ## Scenes
-
-  * A collection of one or more sources
-  * Ability to show/hide sources as needed
-  * No (theoritical) limitation on the number of sources inside a scene
-]
-
---
-
-### How to effectively organize your OBS setup?
-
----
-
-# The connections with R
-
-### __Sources__ = __(Specialized) Vectors__: A special type of object that may have its own custom attributes and specialties.
-
-### __Scenes__ = __Lists__: A container of objects, including (potentially) other scenes/lists!
-
----
-
-# Inside the Welcome Scene
-
-Add more here
-
----
-
-
+???
 ## OBS Parallels to `r icon_style(fontawesome("r-project"), fill = "blue")`
-
 + Base install has a lot of built-in features already to get you started
 + plugins can enhance your experience developing and serving streams, much like community packages in R
 + Organizing the building blocks of your setup with scenes, which contains sources and can even contain more scenes. This is like the list object in R
 
+
 ---
 
-## Tips for using OBS
+.center[
+# My Welcome Scene
+]
 
+.welcome-box[]
+
+.image-location[
+`r icons::fontawesome("image") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.footer-location[
+`r icons::fontawesome("newspaper") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.camera-location[
+`r icons::fontawesome("camera") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.mic-location[
+`r icons::fontawesome("microphone") %>% icons::icon_style(., fill = "#34ebc0", scale = 8)`
+]
+
+.pull-right[
+
+```{r welcome_data, echo=FALSE}
+# filter for welcome scene from computed data frame
+welcome_df <- obs_df %>%
+  filter(name == "[*] Only Me Welcome")
+
+
+listviewer::jsonedit(welcome_df$actual_sources_named[[1]], width = 500, height = 400)
+
+
+```
+]
+
+
+???
+other quick Tips
 * Audio devices in dedicated scenes
 * Back up your settings regularly
 * Always do test recordings whenever you change levels or scene layouts
@@ -281,88 +330,122 @@ Add more here
 * If streaming to YouTube, take advantage of doing an unlisted stream so you can mimic what it will be like for the real thing
 * Lock sources when finished placing them, so you don't accidently move them
 * If doing both streaming and recording, highly recommended to use a graphics card to offload encoding (I use an NVidia card in my streaming computer)
-
-Link to video when ready
-
 ---
 
-# Audacity
-
-.left-column[
-* One of the first open-source audio recorder/editors used in podcasting
-* Cross-platform
-* Recently achieved version 3
-* Many built-in plugins for noise reduction, fade in/out, multi-track editing
+.center[
+## Quick Tips with OBS
 ]
 
-.right-column[
-<img src="img/audacity_demo.gif" width="100%"/>
+.pull-left[
+* Take advantage of **nested** scenes!
+* Unload any media sources not shown in current scene
+* Leverage **browser sources** for dynamic web-based alerts and content
 ]
 
----
-
-# Shotcut
-
-.left-column[
-* A premier open-source video editor
-* Reference implementation of the MLT standard (look this up)
-* Many plugins and filters included for audio/video customization
-* Can leverage hardware for faster encoding
+.pull-right[
+.center[
+<img src="img/my_obs_tutorial_with_border.png" width="100%"/>
+[youtube.com/watch?v=fkvQ_lAGvFQ](https://www.youtube.com/watch?v=fkvQ_lAGvFQ)
+]
 ]
 
-.right-column[
-[https://www.shotcut.org](https://www.shotcut.org/)
+--
 
-<img src="img/shotcut_demo.gif" width="100%"/>
+.center[
+### More video tutorials on using OBS coming soon!
 ]
 
----
 
-
-
-## VOD Ninja
-
-* Uses webRTC and works well with Chrome-based browsers
-* No additional software required
-* Customize options via query parameters in the URL
-* I use it with my shiny dev series interviews
-
-### TODO: Add screenshot
 
 ---
 
-## Podcast hosting
+```{r vdosetup, echo=FALSE}
+iframe_width <- params$iframe_width
+iframe_height <- params$iframe_height
 
-* I have overall good experience with Fireside
-* Other options exist
+if (params$live) {
+  #construct VDO Ninja url
+  vdo_url <- glue::glue("https://vdo.ninja/?view={vdo_id}&scene&room={room_id}", vdo_id = params$vdo_id, room_id = params$room_id)
 
----
+  # construct iframe object
+  embed_html <- htmltools::HTML(glue::glue("<iframe width='{iframe_width}' height='{iframe_height}' src='{vdo_url}' frameborder='0'>"), .noWS = "outside")
 
-## Video hosting/streaming
+  # construct header for slide
+  slide_header <- "This is from VDO Ninja!"
 
-* The major players are Twitch and YouTube
-* Emerging platforms that are decentralized: PeerTube
-* A vibrant and growing community of R and data science streamers seems to be happening more on Twitch these days
+} else {
+  # construct iframe object
+  embed_html <- htmltools::HTML(glue::glue("<img src='img/my_obs_tutorial.png' width='{iframe_width}' height='{iframe_height}'/>"))
 
----
-
-
-# Playing with CSS
-
-**TODO** Use these to illustrate how sources and scenes are like lists and vector elements
-
-.list-box[Welcome]
-
-<style>
-.list-box {
-  border: 5px solid black;
-  background-color: #4D8DC9;
-  height: 400px;
-  width: 1000px;
-  position: absolute;
-  bottom: 50px;
-  right: 100px;
-  font-size: 2.2em;
-  text-align: center;
+  # construct header for slide
+  slide_header <- "This could be from VDO Ninja!"
 }
-</style>
+
+```
+.center[
+## ViDeO Ninja
+]
+
+.left-column[
+* Free web service for audio/video sharing
+* Powered by web RTC and peer-to-peer technology
+* Easily imported into OBS as **browser sources**
+* The engine behind my Shiny Developer Series interviews!
+]
+
+.right-column[
+.center[
+<img src="img/shinydevseries.png" width="100%"/>
+[shinydevseries.com/ep21](https://shinydevseries.com/ep21)
+]
+
+]
+
+---
+class: center, top
+
+### `r slide_header`
+
+`r embed_html`
+
+---
+background-image: url(https://source.unsplash.com/1l2waV8glIQ)
+background-size: contain
+class: center, top
+
+.white[
+# Community Wins
+]
+
+---
+
+.center[
+## A (Live) Shiny Reprex! 
+]
+
+.pull-left[
+.center[
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A short and random <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> twitch stream: debugging a Shiny app problem found on <a href="https://twitter.com/R4DScommunity?ref_src=twsrc%5Etfw">@R4DScommunity</a> and narrating my thoughts - app by <a href="https://twitter.com/Shel_Kariuki?ref_src=twsrc%5Etfw">@Shel_Kariuki</a>! <br><br>Live now: <a href="https://t.co/byE0SlXj3e">https://t.co/byE0SlXj3e</a></p>&mdash; Tan (@_TanHo) <a href="https://twitter.com/_TanHo/status/1407834617944621056?ref_src=twsrc%5Etfw">June 23, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[twitter.com/_TanHo/status/1407834617944621056](https://twitter.com/_TanHo/status/1407834617944621056)
+]
+]
+
+.pull-right[
+.center[
+<img src="img/tan_ho_shiny_stream.png" width="100%"/>
+
+[twitch.tv/videos/1065545295](https://www.twitch.tv/videos/1065545295)
+]
+]
+
+---
+
+.center[
+## The `r icon_style(fontawesome("r-project"), fill = "blue")` & Data Science StreameRs Emerge!
+
+[www.jessemaegan.com/blog/2021-05-28-data-science-twitch-streamers-round-up](https://www.jessemaegan.com/blog/2021-05-28-data-science-twitch-streamers-round-up/)
+]
+
+<iframe width = '1280' height = '420' src="https://www.jessemaegan.com/blog/2021-05-28-data-science-twitch-streamers-round-up/#the-streaming-data-science-community">
+
+
