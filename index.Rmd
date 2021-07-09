@@ -79,7 +79,15 @@ background-position: right
 ### Eric Nantz
 ### Statistician & Content Creator
 ### UseR! 09-July-2021
+
+`r icons::fontawesome("github")` [rpodcast](https://github.com/rpodcast) | `r icons::fontawesome("twitter")` [@theRcast](https://twitter.com/thercast) | `r icons::fontawesome("twitch")` [rpodcast](https://twitch.tv/rpodcast)
+
+`r emo::ji("microphone")` [r-podcast.org](https://www.r-podcast.org)
+`r icons::fontawesome("youtube")` [shinydevseries.com](https://youtube.com/shinydeveloperseries) <br>
+`r emo::ji("newspaper")` [rweekly.org](https://rweekly.org)
 ]
+
+
 ]
 
 ---
@@ -87,7 +95,7 @@ class: center, middle
 
 ### The R for Data Science Slack Community
 
-<img src="img/slack_with_border.png" width="80%">
+<img src="img/slack_with_border.png" alt="R for Data Science Slack Community" width="80%">
 
 ???
 The Mockup Blog authored by Thomas Mock, written with the `{distill}` package.
@@ -96,7 +104,7 @@ class: center, middle
 
 ### Sharing insights via blogging
 
-<img src="img/thomas_mock_blog_with_border.png" width="80%">
+<img src="img/thomas_mock_blog_with_border.png" alt="Thomas Mock blog" width="80%">
 
 
 ---
