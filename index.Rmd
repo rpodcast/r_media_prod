@@ -82,11 +82,10 @@ background-position: right
 
 `r icons::fontawesome("github")` [rpodcast](https://github.com/rpodcast) | `r icons::fontawesome("twitter")` [@theRcast](https://twitter.com/thercast) | `r icons::fontawesome("twitch")` [rpodcast](https://twitch.tv/rpodcast)
 
-`r emo::ji("microphone")` [r-podcast.org](https://www.r-podcast.org)
-`r icons::fontawesome("youtube")` [shinydevseries.com](https://youtube.com/shinydeveloperseries) <br>
-`r emo::ji("newspaper")` [rweekly.org](https://rweekly.org)
+`r emo::ji("microphone")` [r-podcast.org](https://www.r-podcast.org) | `r icons::fontawesome("youtube")` [shinydevseries.com](https://youtube.com/shinydeveloperseries) <br> | `r emo::ji("newspaper")` [rweekly.org](https://rweekly.org)
 ]
 
+Slides available at [rpodcast.github.io/r_media_prod](https://rpodcast.github.io/r_media_prod)
 
 ]
 
